@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Enigma de Palavras</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enigma de Palavras</h1>
+        <p id="dica">Dica: {{ dica }}</p>
+        <p id="enigma">{{ enigma }}</p>
+        <input type="text" id="palpite" placeholder="Digite sua palavra">
+        <button onclick="verificarPalpite()">Responder</button>
+        <p id="feedback"></p>
+        <p id="pontuacao">Pontuação: {{ pontuacao }}</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
